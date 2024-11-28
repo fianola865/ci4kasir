@@ -68,7 +68,7 @@
                 <div class="row mb-3">
                     <label for="inputGambar" class="col-sm-4 col-form-label">Gambar Produk</label>
                     <div class="col-sm-8">
-                        <input type="file" class="form-control" id="gambarProduk" name="gambar_produk" accept="image/*">
+                        <input type="file" class="form-control" id="gambarProduk"  >
                     </div>
                 </div>
 
@@ -105,7 +105,13 @@
                 <div class="row mb-3">
                     <label for="editstokProduk" class="col-sm-4 col-form-label">Stok</label>
                     <div class="col-sm-8">
-                    <input type="number" class="form-control" id="editstokProduk" >
+                    <input type="text" class="form-control" id="editstokProduk" >
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="editgambarProduk" class="col-sm-4 col-form-label">Gambar</label>
+                    <div class="col-sm-8">
+                    <input type="file" class="form-control" id="editgambarProduk" >
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary float-end" id="updateProduk">Edit</button>
@@ -212,6 +218,7 @@
                                 $("#editnamaProduk").val(hasil.nama_produk);
                                 $("#edithargaProduk").val(hasil.harga);
                                 $("#editstokProduk").val(hasil.stok);
+                                $("#editgamabrProduk").val(hasil.gambar_produk)
                                 $("#modaleditProduk").modal("show");
                             } else {
                                 alert('Gagal mengambil data untuk diedit.');
@@ -231,7 +238,8 @@
                         id : $("#editProdukId").val(),
                         nama_produk: $("#editnamaProduk").val(),
                         harga: $("#edithargaProduk").val(),
-                        stok: $("#editstokProduk").val()
+                        stok: $("#editstokProduk").val(),
+                        gambar_produk: $("#editgambarProduk").val()
                     };
 
                     $.ajax({

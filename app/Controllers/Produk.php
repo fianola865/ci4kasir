@@ -44,6 +44,7 @@ class Produk extends Controller
             'nama_produk' => $this->request->getVar('nama_produk'),
             'harga' => $this->request->getVar('harga'),
             'stok' => $this->request->getVar('stok'),
+            'gambar_produk' => $this->request->getVar('gambar_produk'),
         ];
 
         $model = new produkmodel();
@@ -81,7 +82,8 @@ class Produk extends Controller
         $data = [
             'nama_produk' => $this->request->getPost('nama_produk'),
             'harga' => $this->request->getPost('harga'),
-            'stok' => $this->request->getPost('stok')
+            'stok' => $this->request->getPost('stok'),
+            'gambar_produk' => $this->request->getPost('gambar_produk')
         ];
 
         // Coba update produk

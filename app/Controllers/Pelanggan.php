@@ -42,6 +42,7 @@ class Pelanggan extends BaseController
             'NamaPelanggan' => $this->request->getPost('NamaPelanggan'),
             'Alamat' => $this->request->getPost('Alamat'),
             'NomorTlp' => $this->request->getPost('NomorTlp'),
+            ''
         ];
 
         $model = new PelangganModel();
